@@ -1,28 +1,39 @@
 void main() {
-  
-  final wolverine = new Heroe( 
-    poder: 'Regeneración',
-    nombre: 'Logan'
+  final wolverine = new Hero(
+    'Logan', 
+    'Regeneración'
   );
-    
-  print( wolverine );
   
+  print(wolverine);
+  
+  //print(wolverine.name);
+  //print(wolverine.power);
+  //print(wolverine.toString());
 }
 
-class Heroe {
+class Hero {
+  String name;
+  String power;
   
-  String nombre;
-  String poder;
+  /* A continuación el constructor
+   * Debe tener el mismo nombre que la clase a la cual pertenece
+   * De esta forma se le pueden asignar valores a los atributos
+   * de esta clase 'Hero'.
+  */
   
-//   Heroe({ String nombre = 'Sin Nombre', String poder }) {
-//     this.nombre = nombre;
-//     this.poder  = poder; 
-//   }
+  /*
+  Hero(String this.name, String this.power){
+    this.name = name;
+    this.power = power;
+  }
   
-  Heroe({ this.nombre, this.poder });
+  String toString(){
+    return 'nombre: ${this.name} - poder: ${this.power}';
+  }
+  */
   
-  String toString() => 'nombre: $nombre - poder: $poder';
+  Hero(this.name, this.power);
+  String toString() => 'nombre: $name - poder: $power';
   
 }
-
 
